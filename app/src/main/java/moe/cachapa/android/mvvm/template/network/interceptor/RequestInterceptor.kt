@@ -1,4 +1,5 @@
 package moe.cachapa.android.mvvm.template.network.interceptor
 
-interface RequestInterceptor {
-}
+import okhttp3.Interceptor
+
+interface RequestInterceptor: Interceptor
