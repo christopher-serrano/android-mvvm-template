@@ -6,13 +6,13 @@ import moe.cachapa.android.mvvm.template.data.model.MovieItem
 
 data class TrendingMovieListResponse(
     @SerializedName("page")
-    val page: Int?,
+    var page: Int?,
     @SerializedName("results")
-    val results: List<MovieItem?>?,
+    var results: List<MovieItem>?,
     @SerializedName("total_pages")
-    val totalPages: Int?,
+    var totalPages: Int?,
     @SerializedName("total_results")
-    val totalResults: Int?
+    var totalResults: Int?
 ) {
 
 }

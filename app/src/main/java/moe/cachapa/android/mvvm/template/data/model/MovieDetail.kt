@@ -5,53 +5,53 @@ import com.google.gson.annotations.SerializedName
 
 data class MovieDetail(
     @SerializedName("adult")
-    val adult: Boolean?,
+    var adult: Boolean?,
     @SerializedName("backdrop_path")
-    val backdropPath: String?,
+    var backdropPath: String?,
     @SerializedName("belongs_to_collection")
-    val belongsToCollection: BelongsToCollection?,
+    var belongsToCollection: BelongsToCollection?,
     @SerializedName("budget")
-    val budget: Int?,
+    var budget: Int?,
     @SerializedName("genres")
-    val genres: List<Genre?>?,
+    var genres: List<Genre>?,
     @SerializedName("homepage")
-    val homepage: String?,
+    var homepage: String?,
     @SerializedName("id")
-    val id: Int?,
+    var id: Int?,
     @SerializedName("imdb_id")
-    val imdbId: String?,
+    var imdbId: String?,
     @SerializedName("original_language")
-    val originalLanguage: String?,
+    var originalLanguage: String?,
     @SerializedName("original_title")
-    val originalTitle: String?,
+    var originalTitle: String?,
     @SerializedName("overview")
-    val overview: String?,
+    var overview: String?,
     @SerializedName("popularity")
-    val popularity: Double?,
+    var popularity: Double?,
     @SerializedName("poster_path")
-    val posterPath: String?,
+    var posterPath: String?,
     @SerializedName("production_companies")
-    val productionCompanies: List<ProductionCompany?>?,
+    var productionCompanies: List<ProductionCompany>?,
     @SerializedName("production_countries")
-    val productionCountries: List<ProductionCountry?>?,
+    var productionCountries: List<ProductionCountry>?,
     @SerializedName("release_date")
-    val releaseDate: String?,
+    var releaseDate: String?,
     @SerializedName("revenue")
-    val revenue: Int?,
+    var revenue: Int?,
     @SerializedName("runtime")
-    val runtime: Int?,
+    var runtime: Int?,
     @SerializedName("spoken_languages")
-    val spokenLanguages: List<SpokenLanguage?>?,
+    var spokenLanguages: List<SpokenLanguage>?,
     @SerializedName("status")
-    val status: String?,
+    var status: String?,
     @SerializedName("tagline")
-    val tagline: String?,
+    var tagline: String?,
     @SerializedName("title")
-    val title: String?,
+    var title: String?,
     @SerializedName("video")
-    val video: Boolean?,
+    var video: Boolean?,
     @SerializedName("vote_average")
-    val voteAverage: Double?,
+    var voteAverage: Double?,
     @SerializedName("vote_count")
-    val voteCount: Int?
+    var voteCount: Int?
 )

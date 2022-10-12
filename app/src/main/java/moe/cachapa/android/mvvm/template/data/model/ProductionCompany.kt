@@ -4,11 +4,11 @@ import com.google.gson.annotations.SerializedName
 
 data class ProductionCompany(
         @SerializedName("id")
-        val id: Int?,
+        var id: Int?,
         @SerializedName("logo_path")
-        val logoPath: String?,
+        var logoPath: String?,
         @SerializedName("name")
-        val name: String?,
+        var name: String?,
         @SerializedName("origin_country")
-        val originCountry: String?
+        var originCountry: String?
     )

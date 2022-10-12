@@ -6,7 +6,7 @@ import moe.cachapa.android.mvvm.template.data.model.Video
 
 data class VideoListResponse(
     @SerializedName("id")
-    val id: Int?,
+    var id: Int?,
     @SerializedName("results")
-    val results: List<Video?>?
+    var results: List<Video>?
 )

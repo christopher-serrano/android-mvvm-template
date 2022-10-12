@@ -3,34 +3,34 @@ package moe.cachapa.android.mvvm.template.data.model
 import com.google.gson.annotations.SerializedName
 
 data class MovieItem(
-        @SerializedName("adult")
-        val adult: Boolean?,
-        @SerializedName("backdrop_path")
-        val backdropPath: String?,
-        @SerializedName("id")
-        val id: Int?,
-        @SerializedName("title")
-        val title: String?,
-        @SerializedName("original_language")
-        val originalLanguage: String?,
-        @SerializedName("original_title")
-        val originalTitle: String?,
-        @SerializedName("overview")
-        val overview: String?,
-        @SerializedName("poster_path")
-        val posterPath: String?,
-        @SerializedName("media_type")
-        val mediaType: String?,
-        @SerializedName("genre_ids")
-        val genreIds: List<Int?>?,
-        @SerializedName("popularity")
-        val popularity: Double?,
-        @SerializedName("release_date")
-        val releaseDate: String?,
-        @SerializedName("video")
-        val video: Boolean?,
-        @SerializedName("vote_average")
-        val voteAverage: Double?,
-        @SerializedName("vote_count")
-        val voteCount: Int?
-    )
+    @SerializedName("adult")
+    var adult: Boolean?,
+    @SerializedName("backdrop_path")
+    var backdropPath: String?,
+    @SerializedName("id")
+    var id: Int?,
+    @SerializedName("title")
+    var title: String?,
+    @SerializedName("original_language")
+    var originalLanguage: String?,
+    @SerializedName("original_title")
+    var originalTitle: String?,
+    @SerializedName("overview")
+    var overview: String?,
+    @SerializedName("poster_path")
+    var posterPath: String?,
+    @SerializedName("media_type")
+    var mediaType: String?,
+    @SerializedName("genre_ids")
+    var genreIds: List<Int>?,
+    @SerializedName("popularity")
+    var popularity: Double?,
+    @SerializedName("release_date")
+    var releaseDate: String?,
+    @SerializedName("video")
+    var video: Boolean?,
+    @SerializedName("vote_average")
+    var voteAverage: Double?,
+    @SerializedName("vote_count")
+    var voteCount: Int?
+)
