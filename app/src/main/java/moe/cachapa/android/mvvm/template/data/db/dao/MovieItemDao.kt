@@ -1,0 +1,40 @@
+package moe.cachapa.android.mvvm.template.data.db.dao
+
+import androidx.room.*
+import moe.cachapa.android.mvvm.template.data.db.entity.MovieItemEntity
+
+@Dao
+interface MovieItemDao {
+
+    @Insert(onConflict = OnConflictStrategy.IGNORE)
+    suspend fun insert(entity: MovieItemEntity?): Long
+
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    suspend fun update(entity: MovieItemEntity?)
+
+    @Transaction
+    suspend fun upsert(entity: MovieItemEntity?) {
+        val id: Long = insert(entity)
+        if (id == -1L)
+            update(entity)
+    }
+
+    @Query("SELECT * FROM movie_detail WHERE id = :id")
+    suspend fun fetch(id: Int): MovieItemEntity?
+
+    @Query("SELECT * FROM movie_detail")
+    suspend fun fetchAll(): List<MovieItemEntity>?
+
+    @Query("DELETE FROM movie_detail WHERE id = :id")
+    suspend fun delete(id: Int)
+
+    @Query("DELETE FROM movie_detail")
+    suspend fun delete()
+
+    @Transaction
+    suspend fun purge() {
+        val list = fetchAll()
+        if (!list.isNullOrEmpty())
+            delete()
+    }
+}
