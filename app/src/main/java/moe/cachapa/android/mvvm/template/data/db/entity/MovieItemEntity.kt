@@ -39,4 +39,4 @@ data class MovieItemEntity(
     val voteAverage: Double?,
     @ColumnInfo(name = "vote_count")
     val voteCount: Int?
-)
+): BaseEntity()

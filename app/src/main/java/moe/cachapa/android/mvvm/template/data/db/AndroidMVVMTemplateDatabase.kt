@@ -4,12 +4,14 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
+import androidx.room.TypeConverters
 import moe.cachapa.android.mvvm.template.data.db.dao.MovieDetailDao
 import moe.cachapa.android.mvvm.template.data.db.dao.MovieItemDao
 import moe.cachapa.android.mvvm.template.data.db.dao.VideoDao
 import moe.cachapa.android.mvvm.template.data.db.entity.MovieDetailEntity
 import moe.cachapa.android.mvvm.template.data.db.entity.MovieItemEntity
 import moe.cachapa.android.mvvm.template.data.db.entity.VideoEntity
+import moe.cachapa.android.mvvm.template.utils.converters.BaseConverter
 
 @Database(
     entities = [
@@ -20,6 +22,7 @@ import moe.cachapa.android.mvvm.template.data.db.entity.VideoEntity
     version = 1,
     exportSchema = false
 )
+@TypeConverters(BaseConverter::class)
 abstract class AndroidMVVMTemplateDatabase: RoomDatabase() {
 
     //DAOs
