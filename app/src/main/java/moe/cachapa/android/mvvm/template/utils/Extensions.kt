@@ -30,10 +30,9 @@ import java.lang.reflect.Type
 
 // get json from file path
 fun Context.getJsonFromAssets(fileName: String): String? {
-    var json: String? = null
-    try {
+    val json: String? = try {
         val inputStream: InputStream = this.assets.open(fileName)
-        json = inputStream.bufferedReader().use { it.readText() }
+        inputStream.bufferedReader().use { it.readText() }
     } catch (ex: java.lang.Exception) {
         ex.printStackTrace()
         return null

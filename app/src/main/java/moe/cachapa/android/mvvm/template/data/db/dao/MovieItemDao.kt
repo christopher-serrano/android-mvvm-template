@@ -19,16 +19,16 @@ interface MovieItemDao {
             update(entity)
     }
 
-    @Query("SELECT * FROM movie_detail WHERE id = :id")
+    @Query("SELECT * FROM movie_item WHERE id = :id")
     suspend fun fetch(id: Int): MovieItemEntity?
 
-    @Query("SELECT * FROM movie_detail")
+    @Query("SELECT * FROM movie_item")
     suspend fun fetchAll(): List<MovieItemEntity>?
 
-    @Query("DELETE FROM movie_detail WHERE id = :id")
+    @Query("DELETE FROM movie_item WHERE id = :id")
     suspend fun delete(id: Int)
 
-    @Query("DELETE FROM movie_detail")
+    @Query("DELETE FROM movie_item")
     suspend fun delete()
 
     @Transaction

@@ -19,16 +19,16 @@ interface VideoDao {
             update(entity)
     }
 
-    @Query("SELECT * FROM movie_detail WHERE id = :id")
+    @Query("SELECT * FROM video_detail WHERE id = :id")
     suspend fun fetch(id: Int): VideoEntity?
 
-    @Query("SELECT * FROM movie_detail")
+    @Query("SELECT * FROM video_detail")
     suspend fun fetchAll(): List<VideoEntity>?
 
-    @Query("DELETE FROM movie_detail WHERE id = :id")
+    @Query("DELETE FROM video_detail WHERE id = :id")
     suspend fun delete(id: Int)
 
-    @Query("DELETE FROM movie_detail")
+    @Query("DELETE FROM video_detail")
     suspend fun delete()
 
     @Transaction

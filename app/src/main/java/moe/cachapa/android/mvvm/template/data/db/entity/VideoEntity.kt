@@ -5,7 +5,7 @@ import androidx.room.Entity
 import androidx.room.Index
 
 @Entity(
-    tableName = "video",
+    tableName = "video_detail",
     indices = [Index(value = ["id"], unique = true)]
 )
 data class VideoEntity(

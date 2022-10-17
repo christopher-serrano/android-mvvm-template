@@ -81,8 +81,7 @@ class CustomFileUtils(val context: Context) : KoinComponent {
     }
 
     fun loadJsonFromAssets(file: String): String? {
-        var json: String? = null
-        json = try {
+        val json: String? = try {
             val inputStream: InputStream = context.assets.open(file)
             inputStream.bufferedReader().use { it.readText() }
         } catch (ex: Exception) {
@@ -104,7 +103,7 @@ class CustomFileUtils(val context: Context) : KoinComponent {
             if (inputStream != null) {
                 val inputStreamReader = InputStreamReader(inputStream)
                 val bufferedReader = BufferedReader(inputStreamReader)
-                var receiveString: String? = ""
+                var receiveString: String?
                 val stringBuilder = StringBuilder()
                 while (bufferedReader.readLine().also { receiveString = it } != null) {
                     stringBuilder.append(receiveString)
