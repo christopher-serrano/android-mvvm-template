@@ -1,13 +1,21 @@
 package moe.cachapa.android.mvvm.template.repository
 
+import moe.cachapa.android.mvvm.template.data.db.dao.MovieDetailDao
+import moe.cachapa.android.mvvm.template.data.db.dao.MovieItemDao
+import moe.cachapa.android.mvvm.template.data.db.dao.VideoDao
 import moe.cachapa.android.mvvm.template.data.model.MovieDetail
 import moe.cachapa.android.mvvm.template.data.model.MovieItem
 import moe.cachapa.android.mvvm.template.network.api.ApiClient
 import org.koin.core.component.KoinComponent
+import org.koin.core.component.inject
 
 class MovieRepositoryImpl : MovieRepository, KoinComponent {
 
     private val api = ApiClient.invoke()
+
+    private val movieDetailDao: MovieDetailDao by inject()
+    private val movieItemDao: MovieItemDao by inject()
+    private val videoDao: VideoDao by inject()
 
     override suspend fun getUpcomingMovieList(): List<MovieItem>? {
         TODO("Not yet implemented")
