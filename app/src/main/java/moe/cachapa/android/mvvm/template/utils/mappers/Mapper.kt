@@ -1,4 +1,5 @@
 package moe.cachapa.android.mvvm.template.utils.mappers
 
-class MovieItemMap {
+interface Mapper<T, R> {
+    fun map(input: T): R
 }
