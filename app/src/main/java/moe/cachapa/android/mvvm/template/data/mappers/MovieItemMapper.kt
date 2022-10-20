@@ -1,20 +1,25 @@
 package moe.cachapa.android.mvvm.template.data.mappers
 
-import moe.cachapa.android.mvvm.template.data.db.entity.VideoEntity
-import moe.cachapa.android.mvvm.template.data.model.Video
+import moe.cachapa.android.mvvm.template.data.db.entity.MovieItemEntity
+import moe.cachapa.android.mvvm.template.data.model.MovieItem
 import moe.cachapa.android.mvvm.template.utils.mappers.Mapper
 
-class MovieItemMapper : Mapper<VideoEntity, Video> {
-    override fun map(input: VideoEntity): Video = Video(
-        iso6391 = input.iso6391,
-        iso31661 = input.iso31661,
-        name = input.name,
-        key = input.key,
-        site = input.site,
-        size = input.size,
-        type = input.type,
-        official = input.official,
-        publishedAt = input.publishedAt,
-        id = input.id
+class MovieItemMapper : Mapper<MovieItemEntity, MovieItem> {
+    override fun map(input: MovieItemEntity): MovieItem = MovieItem(
+        adult = input.adult,
+        backdropPath = input.backdropPath,
+        id = input.id,
+        title = input.title,
+        originalLanguage = input.originalLanguage,
+        originalTitle = input.originalTitle,
+        overview = input.overview,
+        posterPath = input.posterPath,
+        mediaType = input.mediaType,
+        genreIds = input.genreIds,
+        popularity = input.popularity,
+        releaseDate = input.releaseDate,
+        video = input.video,
+        voteAverage = input.voteAverage,
+        voteCount = input.voteCount
     )
 }
