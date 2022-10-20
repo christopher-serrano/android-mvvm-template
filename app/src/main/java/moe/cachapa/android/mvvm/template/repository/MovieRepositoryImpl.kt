@@ -1,5 +1,7 @@
 package moe.cachapa.android.mvvm.template.repository
 
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.withContext
 import moe.cachapa.android.mvvm.template.data.db.dao.MovieDetailDao
 import moe.cachapa.android.mvvm.template.data.db.dao.MovieItemDao
 import moe.cachapa.android.mvvm.template.data.db.dao.VideoDao
@@ -17,8 +19,10 @@ class MovieRepositoryImpl : MovieRepository, KoinComponent {
     private val movieItemDao: MovieItemDao by inject()
     private val videoDao: VideoDao by inject()
 
-    override suspend fun getUpcomingMovieList(): List<MovieItem>? {
-        TODO("Not yet implemented")
+    override suspend fun getUpcomingMovieList(): List<MovieItem>? = withContext(Dispatchers.IO) {
+        val result = api.getUpcomingMovieList()
+        val list = result.body()?.results
+        list
     }
 
     override suspend fun getTrendingMovieList(): List<MovieItem>? {

@@ -4,7 +4,7 @@ import moe.cachapa.android.mvvm.template.data.db.entity.VideoEntity
 import moe.cachapa.android.mvvm.template.data.model.Video
 import moe.cachapa.android.mvvm.template.utils.mappers.Mapper
 
-class VideoModelMapper : Mapper<VideoEntity?, Video?> {
+class VideoMapper : Mapper<VideoEntity?, Video?> {
     override fun map(input: VideoEntity?): Video =
         Video(
             iso6391 = input?.iso6391,

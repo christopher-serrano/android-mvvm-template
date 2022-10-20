@@ -5,6 +5,7 @@ import moe.cachapa.android.mvvm.template.data.db.AndroidMVVMTemplateDatabase
 import moe.cachapa.android.mvvm.template.data.db.dao.MovieDetailDao
 import moe.cachapa.android.mvvm.template.data.db.dao.MovieItemDao
 import moe.cachapa.android.mvvm.template.data.db.dao.VideoDao
+import moe.cachapa.android.mvvm.template.data.mappers.*
 import moe.cachapa.android.mvvm.template.network.api.ApiClient
 import moe.cachapa.android.mvvm.template.network.interceptor.ConnectivityInterceptor
 import moe.cachapa.android.mvvm.template.network.interceptor.ConnectivityInterceptorImpl
@@ -36,6 +37,14 @@ val localModule = module {
 
 val dataModule = module {
     single { androidContext().getSharedPreferences("Prefs", Context.MODE_PRIVATE) }
+
+    factory { MovieDetailMapper() }
+    factory { MovieDetailEntityMapper() }
+    factory { MovieItemMapper() }
+    factory { MovieItemEntityMapper() }
+    factory { VideoMapper() }
+    factory { VideoEntityMapper() }
+
 }
 
 val databaseModule = module {
