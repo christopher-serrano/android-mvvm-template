@@ -1,6 +1,7 @@
 package moe.cachapa.android.mvvm.template.data.db.dao
 
 import androidx.room.*
+import moe.cachapa.android.mvvm.template.data.db.entity.BaseEntity
 import moe.cachapa.android.mvvm.template.data.db.entity.MovieItemEntity
 
 @Dao
@@ -24,6 +25,9 @@ interface MovieItemDao {
 
     @Query("SELECT * FROM movie_item")
     suspend fun fetchAll(): List<MovieItemEntity>?
+
+    @Query("SELECT * FROM movie_item WHERE list_type = :itemType")
+    suspend fun fetchAllByType(itemType: BaseEntity.MovieListType): List<MovieItemEntity>?
 
     @Query("DELETE FROM movie_item WHERE id = :id")
     suspend fun delete(id: Int)
