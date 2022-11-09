@@ -1,6 +1,6 @@
 package moe.cachapa.android.mvvm.template.utils
 
-import kotlinx.coroutines.*
+import kotlinx.coroutines.* // ktlint-disable no-wildcard-imports
 
 object Coroutines {
     fun main(work: suspend (() -> Unit)) =

@@ -1,6 +1,6 @@
 package moe.cachapa.android.mvvm.template.data.db.dao
 
-import androidx.room.*
+import androidx.room.* // ktlint-disable no-wildcard-imports
 import moe.cachapa.android.mvvm.template.data.db.entity.VideoEntity
 
 @Dao

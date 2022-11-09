@@ -3,7 +3,7 @@ package moe.cachapa.android.mvvm.template.data.db.entity
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.Index
-import moe.cachapa.android.mvvm.template.data.model.*
+import moe.cachapa.android.mvvm.template.data.model.* // ktlint-disable no-wildcard-imports
 
 @Entity(
     tableName = "movie_detail",

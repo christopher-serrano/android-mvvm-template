@@ -3,7 +3,7 @@ package moe.cachapa.android.mvvm.template.utils.library
 import android.content.Context
 import android.util.Log
 import org.koin.core.component.KoinComponent
-import java.io.*
+import java.io.* // ktlint-disable no-wildcard-imports
 import java.lang.Exception
 import java.lang.StringBuilder
 

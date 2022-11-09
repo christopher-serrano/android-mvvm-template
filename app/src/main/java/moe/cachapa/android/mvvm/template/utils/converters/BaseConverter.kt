@@ -1,7 +1,7 @@
 package moe.cachapa.android.mvvm.template.utils.converters
 
 import androidx.room.TypeConverter
-import moe.cachapa.android.mvvm.template.data.model.*
+import moe.cachapa.android.mvvm.template.data.model.* // ktlint-disable no-wildcard-imports
 import moe.cachapa.android.mvvm.template.utils.parseArray
 import moe.cachapa.android.mvvm.template.utils.toJsonString
 import moe.cachapa.android.mvvm.template.utils.typeToken

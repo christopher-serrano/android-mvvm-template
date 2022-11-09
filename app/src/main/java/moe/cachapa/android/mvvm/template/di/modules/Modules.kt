@@ -5,7 +5,7 @@ import moe.cachapa.android.mvvm.template.data.db.AndroidMVVMTemplateDatabase
 import moe.cachapa.android.mvvm.template.data.db.dao.MovieDetailDao
 import moe.cachapa.android.mvvm.template.data.db.dao.MovieItemDao
 import moe.cachapa.android.mvvm.template.data.db.dao.VideoDao
-import moe.cachapa.android.mvvm.template.data.mappers.*
+import moe.cachapa.android.mvvm.template.data.mappers.* // ktlint-disable no-wildcard-imports
 import moe.cachapa.android.mvvm.template.network.api.ApiClient
 import moe.cachapa.android.mvvm.template.network.interceptor.ConnectivityInterceptor
 import moe.cachapa.android.mvvm.template.network.interceptor.ConnectivityInterceptorImpl
