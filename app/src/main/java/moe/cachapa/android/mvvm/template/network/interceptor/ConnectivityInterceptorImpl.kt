@@ -21,7 +21,7 @@ class ConnectivityInterceptorImpl(context: Context) : ConnectivityInterceptor {
 
         // We create a connectivity manager from system services and cast it as ConnectivityManager
         val cm = appContext.getSystemService(Context.CONNECTIVITY_SERVICE)
-                as ConnectivityManager
+            as ConnectivityManager
 
         // TODO: Fix this!
         cm.run {

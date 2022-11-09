@@ -19,12 +19,11 @@ import org.koin.android.ext.koin.androidContext
 import org.koin.dsl.module
 
 val networkModule = module {
-    //single { SomeApiClient.invoke() }
-    //single<SomeInterceptor> { SomeInterceptorImpl(get()) }
+    // single { SomeApiClient.invoke() }
+    // single<SomeInterceptor> { SomeInterceptorImpl(get()) }
     single { ApiClient.invoke() }
     single<ConnectivityInterceptor> { ConnectivityInterceptorImpl(get()) }
     single<RequestInterceptor> { RequestInterceptorImpl() }
-
 }
 
 val repositoryModule = module {
@@ -32,7 +31,6 @@ val repositoryModule = module {
 }
 
 val localModule = module {
-
 }
 
 val dataModule = module {
@@ -44,15 +42,14 @@ val dataModule = module {
     factory { MovieItemEntityMapper() }
     factory { VideoMapper() }
     factory { VideoEntityMapper() }
-
 }
 
 val databaseModule = module {
 
-    //Bind Database
+    // Bind Database
     single { AndroidMVVMTemplateDatabase.invoke(androidContext()) }
 
-    //Provide DAOs
+    // Provide DAOs
     fun provideMovieDetailDao(database: AndroidMVVMTemplateDatabase): MovieDetailDao {
         return database.getMovieDetailDao()
     }
@@ -75,17 +72,17 @@ val serviceModule = module {
 
     single { CustomFileUtils(get()) }
 
-    //factory { SomeBroadCastReceiver() }
-    //single { SomeWorkManager(androidContext()) }
-    //factory { SomeWorkRequest() }
+    // factory { SomeBroadCastReceiver() }
+    // single { SomeWorkManager(androidContext()) }
+    // factory { SomeWorkRequest() }
 }
 
 val workerModule = module {
-    //factory { SomePlaceholderWorker(get(), get()) }
+    // factory { SomePlaceholderWorker(get(), get()) }
 }
 
 val viewModelModule = module {
-    //viewModel { SomeViewModel(get()) }
+    // viewModel { SomeViewModel(get()) }
 }
 
 val utilsModule = module {

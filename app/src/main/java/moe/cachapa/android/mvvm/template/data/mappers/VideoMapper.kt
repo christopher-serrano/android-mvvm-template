@@ -18,5 +18,4 @@ class VideoMapper : Mapper<VideoEntity?, Video?> {
             publishedAt = input?.publishedAt,
             id = input?.id
         )
-
 }

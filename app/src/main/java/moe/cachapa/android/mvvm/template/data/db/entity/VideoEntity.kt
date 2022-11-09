@@ -29,4 +29,4 @@ data class VideoEntity(
     val publishedAt: String?,
     @ColumnInfo(name = "id")
     val id: String?
-): BaseEntity()
+) : BaseEntity()

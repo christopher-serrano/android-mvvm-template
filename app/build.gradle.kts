@@ -4,6 +4,7 @@ plugins {
     id("kotlin-kapt")
     id("androidx.navigation.safeargs.kotlin")
     id("com.google.android.libraries.mapsplatform.secrets-gradle-plugin")
+    id("org.jlleitschuh.gradle.ktlint")
 }
 
 android {
@@ -26,7 +27,6 @@ android {
                 arguments["room.expandProjection"] = "true"
             }
         }
-
     }
 
     buildTypes {
@@ -65,7 +65,7 @@ android {
     }
 }
 
-//Test dependencies
+// Test dependencies
 dependencies {
 
     testImplementation("junit:junit:4.13.2")
@@ -90,7 +90,7 @@ dependencies {
     implementation("io.insert-koin:koin-androidx-workmanager:3.1.0")
 }
 
-//Core dependencies
+// Core dependencies
 dependencies {
     implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar"))))
     implementation("org.jetbrains.kotlin:kotlin-stdlib:1.7.10")
@@ -133,7 +133,7 @@ dependencies {
     kapt("androidx.room:room-compiler:2.4.3")
 }
 
-//Third-party dependencies
+// Third-party dependencies
 dependencies {
 
     // OKHTTP
@@ -161,6 +161,6 @@ dependencies {
     implementation("com.github.bumptech.glide:glide:4.13.2")
     kapt("com.github.bumptech.glide:compiler:4.13.2")
 
-    //carousel recyclerview
+    // carousel recyclerview
     implementation("com.github.sparrow007:carouselrecyclerview:1.2.5")
 }

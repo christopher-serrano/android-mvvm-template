@@ -1,7 +1,7 @@
 package moe.cachapa.android.mvvm.template.data.mappers
 
 import moe.cachapa.android.mvvm.template.data.db.entity.MovieDetailEntity
-import moe.cachapa.android.mvvm.template.data.model.*
+import moe.cachapa.android.mvvm.template.data.model.MovieDetail
 import moe.cachapa.android.mvvm.template.utils.mappers.Mapper
 
 class MovieDetailEntityMapper : Mapper<MovieDetail, MovieDetailEntity> {

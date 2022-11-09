@@ -10,20 +10,19 @@ import retrofit2.http.Path
 
 interface Endpoints {
 
-    //GET Movie Detail
+    // GET Movie Detail
     @GET("/movie/{movie_id}")
     suspend fun getMovieDetail(@Path(value = "movie_id") movieId: Int): Response<MovieDetail?>
 
-    //GET Trending List
-    //option param accepts "day" (for the day) or "week"
+    // GET Trending List
+    // option param accepts "day" (for the day) or "week"
     @GET("/trending/movie/{option}")
     suspend fun getTrendingMovieList(@Path(value = "option") option: String): Response<TrendingMovieListResponse?>
 
-    //GET Upcoming movie list
+    // GET Upcoming movie list
     @GET("/movie/upcoming")
     suspend fun getUpcomingMovieList(): Response<UpcomingMovieListResponse?>
 
     @GET("/movie/{movie_id}/videos")
     suspend fun getMovieVideos(@Path(value = "movie_id") movieId: Int): Response<VideoListResponse?>
-
 }

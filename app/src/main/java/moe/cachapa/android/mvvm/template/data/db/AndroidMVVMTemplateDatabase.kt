@@ -23,9 +23,9 @@ import moe.cachapa.android.mvvm.template.utils.converters.BaseConverter
     exportSchema = false
 )
 @TypeConverters(BaseConverter::class)
-abstract class AndroidMVVMTemplateDatabase: RoomDatabase() {
+abstract class AndroidMVVMTemplateDatabase : RoomDatabase() {
 
-    //DAOs
+    // DAOs
     abstract fun getMovieDetailDao(): MovieDetailDao
     abstract fun getMovieItemDao(): MovieItemDao
     abstract fun getVideoDao(): VideoDao
@@ -53,8 +53,8 @@ abstract class AndroidMVVMTemplateDatabase: RoomDatabase() {
         private fun buildDatabase(context: Context) =
             Room.databaseBuilder(
                 context.applicationContext,
-                AndroidMVVMTemplateDatabase::class.java, "telltale.db"
+                AndroidMVVMTemplateDatabase::class.java,
+                "telltale.db"
             ).fallbackToDestructiveMigration().build()
     }
-
 }

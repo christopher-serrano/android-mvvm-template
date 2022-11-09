@@ -9,7 +9,7 @@ import org.koin.core.component.KoinComponent
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
-class ApiClient: KoinComponent {
+class ApiClient : KoinComponent {
 
     companion object {
         operator fun invoke(): Endpoints {

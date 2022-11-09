@@ -1,6 +1,5 @@
 package moe.cachapa.android.mvvm.template.data.model.response
 
-
 import com.google.gson.annotations.SerializedName
 import moe.cachapa.android.mvvm.template.data.model.Video
 

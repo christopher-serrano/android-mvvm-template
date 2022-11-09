@@ -91,5 +91,4 @@ object BaseConverter {
     fun fromProductionCountryList(input: List<ProductionCountry>?): String? {
         return input?.toJsonString()
     }
-
 }

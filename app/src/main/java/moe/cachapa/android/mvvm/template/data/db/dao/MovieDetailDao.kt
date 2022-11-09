@@ -19,8 +19,9 @@ interface MovieDetailDao {
     @Transaction
     suspend fun upsert(entity: MovieDetailEntity?) {
         val id: Long = insert(entity)
-        if (id == -1L)
+        if (id == -1L) {
             update(entity)
+        }
     }
 
     @Query("SELECT * FROM movie_detail WHERE id = :id")
@@ -38,7 +39,8 @@ interface MovieDetailDao {
     @Transaction
     suspend fun purge() {
         val list = fetchAll()
-        if (!list.isNullOrEmpty())
+        if (!list.isNullOrEmpty()) {
             delete()
+        }
     }
 }

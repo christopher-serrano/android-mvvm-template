@@ -15,8 +15,9 @@ interface VideoDao {
     @Transaction
     suspend fun upsert(entity: VideoEntity?) {
         val id: Long = insert(entity)
-        if (id == -1L)
+        if (id == -1L) {
             update(entity)
+        }
     }
 
     @Query("SELECT * FROM video_detail WHERE id = :id")
@@ -34,7 +35,8 @@ interface VideoDao {
     @Transaction
     suspend fun purge() {
         val list = fetchAll()
-        if (!list.isNullOrEmpty())
+        if (!list.isNullOrEmpty()) {
             delete()
+        }
     }
 }

@@ -13,8 +13,8 @@ buildscript {
     }
 
     dependencies {
-        //classpath("android.arch.navigation:navigation-safe-args-gradle-plugin:1.0.0")
-        classpath("androidx.navigation:navigation-safe-args-gradle-plugin:2.5.2")
+        // classpath("android.arch.navigation:navigation-safe-args-gradle-plugin:1.0.0")
+        classpath("androidx.navigation:navigation-safe-args-gradle-plugin:2.5.3")
         classpath("org.jlleitschuh.gradle:ktlint-gradle:10.2.0")
         classpath("com.google.android.libraries.mapsplatform.secrets-gradle-plugin:secrets-gradle-plugin:2.0.1")
     }

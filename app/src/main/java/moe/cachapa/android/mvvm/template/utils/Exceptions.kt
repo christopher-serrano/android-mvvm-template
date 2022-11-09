@@ -10,4 +10,4 @@ class DateNotFoundException : Exception()
 
 class ApiException(message: String) : IOException(message)
 
-class WorkManagerException: Throwable()
+class WorkManagerException : Throwable()

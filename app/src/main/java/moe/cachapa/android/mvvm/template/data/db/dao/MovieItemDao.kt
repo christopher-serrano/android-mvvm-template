@@ -1,7 +1,6 @@
 package moe.cachapa.android.mvvm.template.data.db.dao
 
 import androidx.room.*
-import moe.cachapa.android.mvvm.template.data.db.entity.BaseEntity
 import moe.cachapa.android.mvvm.template.data.db.entity.MovieItemEntity
 
 @Dao
@@ -16,8 +15,9 @@ interface MovieItemDao {
     @Transaction
     suspend fun upsert(entity: MovieItemEntity?) {
         val id: Long = insert(entity)
-        if (id == -1L)
+        if (id == -1L) {
             update(entity)
+        }
     }
 
     @Query("SELECT * FROM movie_item WHERE id = :id")
@@ -35,7 +35,8 @@ interface MovieItemDao {
     @Transaction
     suspend fun purge() {
         val list = fetchAll()
-        if (!list.isNullOrEmpty())
+        if (!list.isNullOrEmpty()) {
             delete()
+        }
     }
 }
