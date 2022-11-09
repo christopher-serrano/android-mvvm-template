@@ -26,9 +26,6 @@ interface MovieItemDao {
     @Query("SELECT * FROM movie_item")
     suspend fun fetchAll(): List<MovieItemEntity>?
 
-    @Query("SELECT * FROM movie_item WHERE list_type = :itemType")
-    suspend fun fetchAllByType(itemType: BaseEntity.MovieListType): List<MovieItemEntity>?
-
     @Query("DELETE FROM movie_item WHERE id = :id")
     suspend fun delete(id: Int)
 

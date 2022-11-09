@@ -14,4 +14,14 @@ class ExampleUnitTest {
     fun addition_isCorrect() {
         assertEquals(4, 2 + 2)
     }
+
+    @Test
+    fun testSumDigits() {
+        val number = 29
+
+        val temp = number.toString()
+        val charArray = temp.toCharArray()
+
+        kotlin.test.assertTrue(charArray.size == 2)
+    }
 }

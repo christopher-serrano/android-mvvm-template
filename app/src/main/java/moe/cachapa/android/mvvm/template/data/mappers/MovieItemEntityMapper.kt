@@ -1,9 +1,8 @@
 package moe.cachapa.android.mvvm.template.data.mappers
 
-import androidx.room.ColumnInfo
 import moe.cachapa.android.mvvm.template.data.db.entity.MovieItemEntity
+import moe.cachapa.android.mvvm.template.data.db.entity.MovieListType
 import moe.cachapa.android.mvvm.template.data.model.MovieItem
-import moe.cachapa.android.mvvm.template.data.model.Video
 import moe.cachapa.android.mvvm.template.utils.mappers.Mapper
 
 class MovieItemEntityMapper : Mapper<MovieItem, MovieItemEntity> {
@@ -22,6 +21,7 @@ class MovieItemEntityMapper : Mapper<MovieItem, MovieItemEntity> {
         releaseDate = input.releaseDate,
         video = input.video,
         voteAverage = input.voteAverage,
-        voteCount = input.voteCount
+        voteCount = input.voteCount,
+        listType = MovieListType.ALL
     )
 }

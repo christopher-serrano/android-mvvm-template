@@ -10,14 +10,4 @@ abstract class BaseEntity {
 
     @ColumnInfo(name = "region")
     var region: String? = ""
-
-    @ColumnInfo(name = "list_type")
-    var listType: MovieListType = MovieListType.ALL
-
-    enum class MovieListType {
-        ALL,
-        UPCOMING,
-        TRENDING,
-        RECOMMENDED
-    }
 }
