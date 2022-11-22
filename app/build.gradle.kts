@@ -69,8 +69,8 @@ android {
 dependencies {
 
     testImplementation("junit:junit:4.13.2")
-    androidTestImplementation("androidx.test.ext:junit:1.1.3")
-    androidTestImplementation("androidx.test.espresso:espresso-core:3.4.0")
+    androidTestImplementation("androidx.test.ext:junit:1.1.4")
+    androidTestImplementation("androidx.test.espresso:espresso-core:3.5.0")
 
     // mockito test
     testImplementation("org.mockito:mockito-core:4.5.1")
@@ -93,7 +93,7 @@ dependencies {
 // Core dependencies
 dependencies {
     implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar"))))
-    implementation("org.jetbrains.kotlin:kotlin-stdlib:1.7.10")
+    implementation("org.jetbrains.kotlin:kotlin-stdlib:1.7.20")
     implementation("androidx.core:core-ktx:1.9.0")
 
     // AppCompat
@@ -112,15 +112,15 @@ dependencies {
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
 
     // Navigation Components
-    implementation("androidx.navigation:navigation-fragment-ktx:2.5.2")
-    implementation("androidx.navigation:navigation-ui-ktx:2.5.2")
+    implementation("androidx.navigation:navigation-fragment-ktx:2.5.3")
+    implementation("androidx.navigation:navigation-ui-ktx:2.5.3")
 
     // Navigation Features
-    implementation("androidx.navigation:navigation-dynamic-features-fragment:2.5.2")
+    implementation("androidx.navigation:navigation-dynamic-features-fragment:2.5.3")
 
     // ViewPager2
     implementation("androidx.viewpager2:viewpager2:1.0.0")
-    implementation("com.google.android.material:material:1.8.0-alpha01")
+    implementation("com.google.android.material:material:1.8.0-alpha02")
 
     // Paging
     implementation("androidx.paging:paging-runtime-ktx:3.1.1")
